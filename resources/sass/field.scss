@@ -1,0 +1,38 @@
+.selected {
+    background-color: var(--primary);
+    display: inline-block;
+    border-radius: .25rem;
+    color: var(--white);
+    margin: .05rem .2rem .01rem .01rem;
+    margin-bottom: 1rem;
+    padding: 2px;
+    &:hover {
+        background-color: var(--primary-dark);
+    }
+}
+.custom__tag  {
+    display: inline-block;
+    padding: 3px 12px;
+    padding-right: 0px;
+    background: #41b883;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ededed;
+  }
+
+.custom__remove {
+    transition: all .2s ease;
+    color: #fff;
+    padding: 3.5px 10px;
+    border-radius: 8px;    
+}
+
+.custom__remove:hover {
+    background-color: var(--primary-dark);
+    transition: all .2s ease;
+    color: #000;
+    opacity: .3;
+}
+
