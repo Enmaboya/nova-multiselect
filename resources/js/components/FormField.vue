@@ -1,4 +1,4 @@
-<template>
+﻿<template>
     <default-field :field="field">
         <template slot="field">
                 <multiselect 
@@ -7,10 +7,11 @@
                     :multiple="true" 
                     :close-on-select="false" 
                     :clear-on-select="false" 
-                    :hide-selected="true" 
+                    :hide-selected="true"
+                    :showNoResults="false"
                     :preserve-search="true" 
                     placeholder="+"
-                    label="label" 
+                    label="label"
                     track-by="label" 
                     :preselect-first="true" 
                     selectLabel="Нажмите Enter чтобы выбрать" 

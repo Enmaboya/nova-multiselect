@@ -862,6 +862,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -11057,6 +11058,7 @@ var render = function() {
               "close-on-select": false,
               "clear-on-select": false,
               "hide-selected": true,
+              showNoResults: false,
               "preserve-search": true,
               placeholder: "+",
               label: "label",
