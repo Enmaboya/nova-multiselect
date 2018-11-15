@@ -8,7 +8,7 @@
                     :close-on-select="false" 
                     :clear-on-select="false" 
                     :hide-selected="true"
-                    :showNoResults="false"
+                    :showNoResults="true"
                     :preserve-search="true" 
                     placeholder="+"
                     label="label"
@@ -23,6 +23,7 @@
                             <span class="custom__remove" @click="props.remove(props.option)"><close class="close">x</close></span>
                         </span>
                     </template>
+                    <span slot="noResult">{{__("No elements found. Consider changing the search query")}}</span>
                 </multiselect>
             <p v-if="hasError" class="my-2 text-danger">
                 {{ firstError }}

@@ -863,6 +863,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -11051,56 +11052,72 @@ var render = function() {
         "template",
         { slot: "field" },
         [
-          _c("multiselect", {
-            attrs: {
-              options: _vm.field.options,
-              multiple: true,
-              "close-on-select": false,
-              "clear-on-select": false,
-              "hide-selected": true,
-              showNoResults: false,
-              "preserve-search": true,
-              placeholder: "+",
-              label: "label",
-              "track-by": "label",
-              "preselect-first": true,
-              selectLabel: "Нажмите Enter чтобы выбрать",
-              deselectLabel: "Нажмите Enter чтобы убрать"
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "tag",
-                fn: function(props) {
-                  return [
-                    _c("span", { staticClass: "custom__tag" }, [
-                      _c("span", [_vm._v(_vm._s(props.option.label))]),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass: "custom__remove",
-                          on: {
-                            click: function($event) {
-                              props.remove(props.option)
-                            }
-                          }
-                        },
-                        [_c("close", { staticClass: "close" }, [_vm._v("x")])],
-                        1
-                      )
-                    ])
-                  ]
-                }
-              }
-            ]),
-            model: {
-              value: _vm.value,
-              callback: function($$v) {
-                _vm.value = $$v
+          _c(
+            "multiselect",
+            {
+              attrs: {
+                options: _vm.field.options,
+                multiple: true,
+                "close-on-select": false,
+                "clear-on-select": false,
+                "hide-selected": true,
+                showNoResults: true,
+                "preserve-search": true,
+                placeholder: "+",
+                label: "label",
+                "track-by": "label",
+                "preselect-first": true,
+                selectLabel: "Нажмите Enter чтобы выбрать",
+                deselectLabel: "Нажмите Enter чтобы убрать"
               },
-              expression: "value"
-            }
-          }),
+              scopedSlots: _vm._u([
+                {
+                  key: "tag",
+                  fn: function(props) {
+                    return [
+                      _c("span", { staticClass: "custom__tag" }, [
+                        _c("span", [_vm._v(_vm._s(props.option.label))]),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "custom__remove",
+                            on: {
+                              click: function($event) {
+                                props.remove(props.option)
+                              }
+                            }
+                          },
+                          [
+                            _c("close", { staticClass: "close" }, [_vm._v("x")])
+                          ],
+                          1
+                        )
+                      ])
+                    ]
+                  }
+                }
+              ]),
+              model: {
+                value: _vm.value,
+                callback: function($$v) {
+                  _vm.value = $$v
+                },
+                expression: "value"
+              }
+            },
+            [
+              _c("span", { attrs: { slot: "noResult" }, slot: "noResult" }, [
+                _vm._v(
+                  _vm._s(
+                    _vm.__(
+                      "No elements found. Consider changing the search query"
+                    )
+                  )
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
           _vm.hasError
             ? _c("p", { staticClass: "my-2 text-danger" }, [
